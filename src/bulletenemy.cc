@@ -41,7 +41,7 @@ void bulletenemyController::init() {
     });
 
     // Handling the Collision of the bullet with the bulletenemy
-    notice_collisions_with("BulletEnemy", [&](Event &e) {
+    notice_collisions_with("bulletenemy", [&](Event &e) {
         std::cout << "Bullet collided with BulletEnemy!" << std::endl;
         remove_agent(id());
     });

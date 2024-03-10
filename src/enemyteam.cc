@@ -55,9 +55,9 @@ void enemyteamController::init() {
 
 void enemyteamController::create_level1_enemies(){
     // Create the enemies for level 1
-    enviro::Agent& enemy_agent_1 = add_agent("Enemy", 200, -100, 0, {{"fill", "red"}, {"stroke", "black"}});
+    //enviro::Agent& enemy_agent_1 = add_agent("Enemy", 200, -100, 0, {{"fill", "red"}, {"stroke", "black"}});
     enviro::Agent& enemy_agent_2 = add_agent("Enemy", 200, 100, 0, {{"fill", "red"}, {"stroke", "black"}});
-    enemy_ids.push_back(enemy_agent_1.get_id());
+    //enemy_ids.push_back(enemy_agent_1.get_id());
     enemy_ids.push_back(enemy_agent_2.get_id());
 }
 

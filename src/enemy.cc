@@ -33,20 +33,23 @@ void enemyController::init() {
 
 void enemyController::update() {
 
-    // Simple patrolling behavior
-    omni_apply_force(0,10*patrol_direction);
-
     // Check if the player is within range
     if ( sensor_value(0) < patrol_range || sensor_value(1) < patrol_range){
         // Enable chasing and shooting
-        //chasing = true;
+        chasing = true;
         shooting = true;
-        printf("chasing\n");
+    }
+    
+    printf("chase: %d\n", chasing);
+    printf("shoot: %d\n", shooting);
+    // Simple patrolling behavior
+    if (!chasing){
+        printf("patrolling\n");
+        omni_apply_force(0,10*patrol_direction);
     }
 
     // Check if chasing is enabled
     if ( chasing ) {
-        
         // Move towards the player
         printf("chasing\n");
         omni_move_toward(player_pos.x, player_pos.y, patrol_speed);

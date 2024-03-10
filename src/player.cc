@@ -41,9 +41,6 @@ void PlayerController::init() {
                 shoot();
             }
         });
-        
-        // Publish the position of the player
-        emit(Event("player_position", {{"x", position().x}, {"y", position().y}}));
 }   
     
 
@@ -85,6 +82,9 @@ void PlayerController::update() {
         std::cout << "Player collided with Enemy!" << std::endl;
         remove_agent(id());
     });
+
+    // Publish the position of the player
+    emit(Event("player_position", {{"x", position().x}, {"y", position().y}}));
 
 
 }

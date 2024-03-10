@@ -68,7 +68,7 @@ class enemyController : public Process, public AgentInterface {
     // Variables to keep track of the enemy's state
     double patrol_direction = 1;
     double patrol_range = 100;
-    double patrol_speed = 0.05;
+    double patrol_speed = 0.02;
     double hit_timer = 0;
     double shoot_timer = 0;
     double shoot_increment = 0.1;
