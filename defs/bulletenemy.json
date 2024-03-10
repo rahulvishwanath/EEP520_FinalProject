@@ -1,7 +1,7 @@
 {
-  "name": "Bullet",
+  "name": "bulletenemy",
   "type": "dynamic",
-  "description": "A fast-moving bullet that is shot by the player.",
+  "description": "A fast-moving bullet that is shot by the enemy.",
   "shape": "omni",
   "radius": 2,
   "mass": 0.1,
@@ -11,5 +11,5 @@
     "rotational": 0
   },
   "sensors": [],
-  "controller": "lib/bullet.so"
+  "controller": "lib/bulletenemy.so"
 }

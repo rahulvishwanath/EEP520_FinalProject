@@ -77,11 +77,11 @@ void enemyController::shoot(){
     // check if the player is to the left or right of the enemy
     if (player_pos.x > position().x) {
         // Player is to the right
-        Agent& bullet = add_agent("Bullet", x()+15 , y(), 0, {{"fill", "red"}, {"stroke", "black"}});
+        Agent& bullet = add_agent("bulletenemy", x()+15 , y(), 0, {{"fill", "red"}, {"stroke", "black"}});
         bullet.omni_apply_force(100,0);
     } else {
         // Player is to the left
-        Agent& bullet = add_agent("Bullet", x()-15 , y(), 0, {{"fill", "red"}, {"stroke", "black"}});
+        Agent& bullet = add_agent("bulletenemy", x()-15 , y(), 0, {{"fill", "red"}, {"stroke", "black"}});
         bullet.omni_apply_force(-100,0);
     }
 }

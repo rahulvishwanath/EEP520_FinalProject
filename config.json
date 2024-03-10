@@ -44,6 +44,11 @@
         "position": { "x": 0, "y": 0, "theta": 0 }
         },
         {
+        "definition": "defs/bulletenemy.json",
+        "style": { "fill": "red", "stroke": "black" },
+        "position": { "x": 0, "y": 0, "theta": 0 }
+        },
+        {
         "definition": "defs/player.json",
         "style": { "fill": "lightblue", "stroke": "black" },
         "position": { "x": 0, "y": 0, "theta": 0 }

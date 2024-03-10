@@ -1,10 +1,14 @@
 #include <iostream>
-#include "bullet.h"
+#include "bulletenemy.h"
 
 using namespace enviro;
 
 // Put your implementations here
-void bulletController::init() {
+
+using namespace enviro;
+
+// Put your implementations here
+void bulletenemyController::init() {
 
     // Handling the Collision of the bullet with the enemy
     notice_collisions_with("Enemy", [&](Event &e) {     
@@ -37,11 +41,9 @@ void bulletController::init() {
     });
 
     // Handling the Collision of the bullet with the bulletenemy
-    notice_collisions_with("bulletenemy", [&](Event &e) {
+    notice_collisions_with("BulletEnemy", [&](Event &e) {
         std::cout << "Bullet collided with BulletEnemy!" << std::endl;
         remove_agent(id());
     });
 
 }
-
-

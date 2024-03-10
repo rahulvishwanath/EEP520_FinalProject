@@ -75,7 +75,7 @@ void PlayerController::update() {
    
 
    // Handling the Collision of the player with the bullet 
-    notice_collisions_with("Bullet", [&](Event &e) {
+    notice_collisions_with("bulletenemy", [&](Event &e) {
         std::cout << "Player collided with Bullet!" << std::endl;
         remove_agent(id());
     });
@@ -117,7 +117,7 @@ void PlayerController::shoot() {
    
     // Initialize the bullet and apply force to it
     // Apply a force to the bullet
-    Agent& bullet = add_agent("Bullet", x, y, 0, {{"fill", "red"}, {"stroke", "black"}});
+    Agent& bullet = add_agent("Bullet", x, y, 0, {{"fill", "blue"}, {"stroke", "black"}});
     bullet.omni_apply_force(x_axis*100, y_axis*100);
 
 }
