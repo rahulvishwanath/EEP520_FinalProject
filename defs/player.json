@@ -1,0 +1,15 @@
+{
+  "name": "Player",
+  "type": "dynamic",
+  "description": "Player character controlled by keyboard inputs with the ability to shoot.",
+  "shape": "omni",
+  "radius": 10,
+  "mass": 1,
+  "friction": {
+    "collision": 0.5,
+    "linear": 0.1,
+    "rotational": 0
+  },
+  "sensors": [],
+  "controller": "lib/player.so"
+}

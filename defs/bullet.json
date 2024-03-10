@@ -1,0 +1,15 @@
+{
+  "name": "Bullet",
+  "type": "dynamic",
+  "description": "A fast-moving bullet.",
+  "shape": "omni",
+  "radius": 2,
+  "mass": 0.1,
+  "friction": {
+    "collision": 0,
+    "linear": 0,
+    "rotational": 0
+  },
+  "sensors": [],
+  "controller": "lib/bullet.so"
+}

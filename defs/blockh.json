@@ -1,0 +1,19 @@
+{
+    "name": "blockh",
+    "type": "static",
+    "description": "Horizontal block",
+    "shape": [
+        { "x": -40, "y": 10 },
+        { "x": 10, "y": 10 },
+        { "x": 10, "y": -10 },
+        { "x": -40, "y": -10 }
+    ],
+    "friction": {
+      "collision": 1,
+      "linear": 40,
+      "rotational": 0
+    },
+    "sensors": [],
+    "mass": 100,    
+    "controller": "lib/blockh.so"
+}

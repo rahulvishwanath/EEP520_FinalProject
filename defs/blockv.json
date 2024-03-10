@@ -1,0 +1,19 @@
+{
+    "name": "blockv",
+    "type": "static",
+    "description": "Vertical block",
+    "shape": [
+        { "x": -10, "y": 10 },
+        { "x": 10, "y": 10 },
+        { "x": 10, "y": -40 },
+        { "x": -10, "y": -40 }
+    ],
+    "friction": {
+      "collision": 1,
+      "linear": 40,
+      "rotational": 0
+    },
+    "sensors": [],
+    "mass": 100,    
+    "controller": "lib/blockv.so"
+}
