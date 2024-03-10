@@ -42,6 +42,18 @@ void bulletController::init() {
         remove_agent(id());
     });
 
+    // Handling the Collision of the bullet with enemyl2
+    notice_collisions_with("enemyl2", [&](Event &e) {
+        std::cout << "Bullet collided with EnemyL2!" << std::endl;
+        remove_agent(id());
+    });
+
+    // Handling the Collision of the bullet with enemyl3
+    notice_collisions_with("enemyl3", [&](Event &e) {
+        std::cout << "Bullet collided with EnemyL3!" << std::endl;
+        remove_agent(id());
+    });
+
 }
 
 

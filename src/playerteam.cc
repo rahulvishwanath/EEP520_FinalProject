@@ -6,7 +6,11 @@ using namespace enviro;
 void playerteamController::init() {
     // Add Welcome message
     enviro::Agent& msg_agent_title = add_agent("message", -335, -300, 0, {{"color", "black"}, {"fill", "white"}, {"stroke", "white"}});
-    msg_agent_title.label("Welcome To The Game..!! It's Kill or be Killed. Survival of the skillful ", 0, 0);
+    msg_agent_title.label("Welcome To The Game..!! It's Kill or be Killed. Survival of the skillful..Lets HUNT..!!", 0, 0);
+
+    enviro::Agent& msg_agent_tip = add_agent("message", -335, -280, 0, {{"color", "black"}, {"fill", "white"}, {"stroke", "white"}});
+    msg_agent_tip.label("Use the a,s,d,f to navigate (Tap the keys, gives better control).. use space to shoot in the last pressed direction..use the momemtum for ur advantage", 0, 0);
+
 
     // watch for emit Level2 event
     watch("level2", [&](Event& e) {
@@ -90,35 +94,35 @@ void playerteamController::update() {
 
 void playerteamController::create_level1_message(){
     // Create the message for level 1
-    enviro::Agent& msg_agent = add_agent("message", -335, -280, 0, {{"color", "black"}, {"fill", "white"}, {"stroke", "white"}});
-    msg_agent.label("Level 1 : EASY..!", 0, 0);
+    enviro::Agent& msg_agent = add_agent("message", -335, -260, 0, {{"color", "black"}, {"fill", "white"}, {"stroke", "white"}});
+    msg_agent.label("Level 1 : EASY..!    Enemies will SHOOT if you get too close..!!", 0, 0);
     message_id = msg_agent.get_id();
 }
 
 void playerteamController::create_level2_message(){
     // Create the message for level 2
-    enviro::Agent& msg_agent = add_agent("message", -335, -280, 0, {{"color", "black"}, {"fill", "white"}, {"stroke", "white"}});
-    msg_agent.label("Level 2 : MEDIUM..!!", 0, 0);
+    enviro::Agent& msg_agent = add_agent("message", -335, -260, 0, {{"color", "black"}, {"fill", "white"}, {"stroke", "white"}});
+    msg_agent.label("Level 2 : MEDIUM..!!   Enemies will SHOOT and CHASE if you get too close..!!", 0, 0);
     message_id = msg_agent.get_id();
 }
 
 void playerteamController::create_level3_message(){
     // Create the message for level 3
-    enviro::Agent& msg_agent = add_agent("message", -335, -280, 0, {{"color", "black"}, {"fill", "white"}, {"stroke", "white"}});
-    msg_agent.label("Level 3 : HARD..!!!", 0, 0);
+    enviro::Agent& msg_agent = add_agent("message", -335, -260, 0, {{"color", "black"}, {"fill", "white"}, {"stroke", "white"}});
+    msg_agent.label("Level 3 : HARD..!!!  Enemies are looking for blood, they will CHASE you from the start and try to kill you..!!", 0, 0);
     message_id = msg_agent.get_id();
 }
 
 void playerteamController::create_gameover_message(){
     // Create the game over message
-    enviro::Agent& msg_agent = add_agent("message", -335, -280, 0, {{"color", "black"}, {"fill", "white"}, {"stroke", "white"}});
-    msg_agent.label("Game Over..!!!!! Re-launch the game if you like to try again.! ", 0, 0);
+    enviro::Agent& msg_agent = add_agent("message", -335, -260, 0, {{"color", "black"}, {"fill", "white"}, {"stroke", "white"}});
+    msg_agent.label("Game Over..!!!!! The hunter got HUNTED.. Re-launch the game if you like to try again.! ", 0, 0);
     message_id = msg_agent.get_id();
 }
 
 void playerteamController::create_gamecomplete_message(){
     // Create the game over message
-    enviro::Agent& msg_agent = add_agent("message", -335, -280, 0, {{"color", "black"}, {"fill", "white"}, {"stroke", "white"}});
-    msg_agent.label("Congratulations..!! You have completed the game.! Re-launch the game if you like to play again.!", 0, 0);
+    enviro::Agent& msg_agent = add_agent("message", -335, -260, 0, {{"color", "black"}, {"fill", "white"}, {"stroke", "white"}});
+    msg_agent.label("Congratulations..!! You are a true HUNTER.! Re-launch the game if you like to play again.!", 0, 0);
     message_id = msg_agent.get_id();
 }

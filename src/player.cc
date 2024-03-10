@@ -83,6 +83,18 @@ void PlayerController::update() {
         remove_agent(id());
     });
 
+    // watch for collision with enemyl2
+    notice_collisions_with("enemyl2", [&](Event &e) {
+        std::cout << "Player collided with EnemyL2!" << std::endl;
+        remove_agent(id());
+    });
+
+    // watch for collision with enemyl3
+    notice_collisions_with("enemyl3", [&](Event &e) {
+        std::cout << "Player collided with EnemyL3!" << std::endl;
+        remove_agent(id());
+    });
+
     // Publish the position of the player
     emit(Event("player_position", {{"x", position().x}, {"y", position().y}}));
 

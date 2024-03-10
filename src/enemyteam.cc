@@ -55,18 +55,18 @@ void enemyteamController::init() {
 
 void enemyteamController::create_level1_enemies(){
     // Create the enemies for level 1
-    //enviro::Agent& enemy_agent_1 = add_agent("Enemy", 200, -100, 0, {{"fill", "red"}, {"stroke", "black"}});
+    enviro::Agent& enemy_agent_1 = add_agent("Enemy", 200, -100, 0, {{"fill", "red"}, {"stroke", "black"}});
     enviro::Agent& enemy_agent_2 = add_agent("Enemy", 200, 100, 0, {{"fill", "red"}, {"stroke", "black"}});
-    //enemy_ids.push_back(enemy_agent_1.get_id());
+    enemy_ids.push_back(enemy_agent_1.get_id());
     enemy_ids.push_back(enemy_agent_2.get_id());
 }
 
 void enemyteamController::create_level2_enemies(){
     // Create the enemies for level 2
-    enviro::Agent& enemy_agent_1 = add_agent("Enemy", 150, 50, 0, {{"fill", "red"}, {"stroke", "black"}});
-    enviro::Agent& enemy_agent_2 = add_agent("Enemy", -150, 50, 0, {{"fill", "red"}, {"stroke", "black"}});
-    enviro::Agent& enemy_agent_3 = add_agent("Enemy", 100, -50, 0, {{"fill", "red"}, {"stroke", "black"}});
-    enviro::Agent& enemy_agent_4 = add_agent("Enemy", -100, 150, 0, {{"fill", "red"}, {"stroke", "black"}});
+    enviro::Agent& enemy_agent_1 = add_agent("enemyl2", 150, 50, 0, {{"fill", "red"}, {"stroke", "black"}});
+    enviro::Agent& enemy_agent_2 = add_agent("enemyl2", -150, 50, 0, {{"fill", "red"}, {"stroke", "black"}});
+    enviro::Agent& enemy_agent_3 = add_agent("enemyl2", 100, -50, 0, {{"fill", "red"}, {"stroke", "black"}});
+    enviro::Agent& enemy_agent_4 = add_agent("enemyl2", -100, 150, 0, {{"fill", "red"}, {"stroke", "black"}});
     enemy_ids.push_back(enemy_agent_1.get_id());
     enemy_ids.push_back(enemy_agent_2.get_id());
     enemy_ids.push_back(enemy_agent_3.get_id());
@@ -75,14 +75,14 @@ void enemyteamController::create_level2_enemies(){
 
 void enemyteamController::create_level3_enemies(){
     // Create the enemies for level 3
-    enviro::Agent& enemy_agent_1 = add_agent("Enemy", -250, 50, 0, {{"fill", "red"}, {"stroke", "black"}});
-    enviro::Agent& enemy_agent_2 = add_agent("Enemy", 250, 50, 0, {{"fill", "red"}, {"stroke", "black"}});
-    enviro::Agent& enemy_agent_3 = add_agent("Enemy", 50, 80, 0, {{"fill", "red"}, {"stroke", "black"}});
-    enviro::Agent& enemy_agent_4 = add_agent("Enemy", -50, -80, 0, {{"fill", "red"}, {"stroke", "black"}});
-    enviro::Agent& enemy_agent_5 = add_agent("Enemy", 150, 150, 0, {{"fill", "red"}, {"stroke", "black"}});
-    enviro::Agent& enemy_agent_6 = add_agent("Enemy", -150, -150, 0, {{"fill", "red"}, {"stroke", "black"}});
-    enviro::Agent& enemy_agent_7 = add_agent("Enemy", 150, -150, 0, {{"fill", "red"}, {"stroke", "black"}});
-    enviro::Agent& enemy_agent_8 = add_agent("Enemy", -150, 150, 0, {{"fill", "red"}, {"stroke", "black"}});
+    enviro::Agent& enemy_agent_1 = add_agent("enemyl3", -250, 50, 0, {{"fill", "red"}, {"stroke", "black"}});
+    enviro::Agent& enemy_agent_2 = add_agent("enemyl3", 250, 50, 0, {{"fill", "red"}, {"stroke", "black"}});
+    enviro::Agent& enemy_agent_3 = add_agent("enemyl3", 50, 80, 0, {{"fill", "red"}, {"stroke", "black"}});
+    enviro::Agent& enemy_agent_4 = add_agent("enemyl3", -50, -80, 0, {{"fill", "red"}, {"stroke", "black"}});
+    enviro::Agent& enemy_agent_5 = add_agent("enemyl3", 150, 150, 0, {{"fill", "red"}, {"stroke", "black"}});
+    enviro::Agent& enemy_agent_6 = add_agent("enemyl3", -150, -150, 0, {{"fill", "red"}, {"stroke", "black"}});
+    enviro::Agent& enemy_agent_7 = add_agent("enemyl3", 150, -150, 0, {{"fill", "red"}, {"stroke", "black"}});
+    enviro::Agent& enemy_agent_8 = add_agent("enemyl3", -150, 150, 0, {{"fill", "red"}, {"stroke", "black"}});
     enemy_ids.push_back(enemy_agent_1.get_id());
     enemy_ids.push_back(enemy_agent_2.get_id());
     enemy_ids.push_back(enemy_agent_3.get_id());

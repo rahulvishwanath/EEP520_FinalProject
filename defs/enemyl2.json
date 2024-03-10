@@ -1,0 +1,26 @@
+{
+    "name": "enemyl2",
+    "type": "dynamic",
+    "description": "Enemy agent with patrolling behavior and with the ability to shoot and chase the player.",
+    "shape": "omni",
+    "radius": 5,
+    "mass": 1,
+    "friction": {
+      "collision": 0.5,
+      "linear": 0.1,
+      "rotational": 0.1
+    },
+    "sensors": [
+      { 
+          "type": "range",
+          "location": { "x": 0, "y": 0 },
+          "direction": -3.1
+      },
+      { 
+          "type": "range",
+          "location": { "x": 0, "y": 0 },
+          "direction": 3.1
+      }
+    ],
+    "controller": "lib/enemyl2.so"
+  }

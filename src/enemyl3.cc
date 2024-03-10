@@ -1,11 +1,13 @@
 #include <iostream>
-#include "enemy.h"
+#include "enemyl3.h"
 
 using namespace enviro;
 
 // Put your implementations here
 
-void enemyController::init() {
+void enemyl3Controller::init() {
+
+  printf("enemy l2 initialized\n");
         
 // Handling collisions with blockv
     notice_collisions_with("blockv", [&](Event &e) {
@@ -31,19 +33,23 @@ void enemyController::init() {
    
 }
 
-void enemyController::update() {
+void enemyl3Controller::update() {
 
     // Check if the player is within range
     if ( sensor_value(0) < patrol_range || sensor_value(1) < patrol_range){
-        // Enable shooting
+        // enable shooting
         shooting = true;
     }
-
-    printf("shoot: %d\n", shooting);
     
-    // Simple patrolling behavior
-    printf("patrolling\n");
-    omni_apply_force(0,10*patrol_direction);
+    printf("chase: %d\n", chasing);
+    printf("shoot: %d\n", shooting);
+
+    // Check if chasing is enabled
+    if ( chasing ) {
+        // Move towards the player
+        printf("chasing\n");
+        omni_move_toward(player_pos.x, player_pos.y, patrol_speed);
+    }
 
     // Check if shooting is enabled
     if ( shooting ) {
@@ -65,7 +71,7 @@ void enemyController::update() {
 
 }
 
-void enemyController::shoot(){
+void enemyl3Controller::shoot(){
 
     // check if the player is to the left or right of the enemy
     if (player_pos.x > position().x) {

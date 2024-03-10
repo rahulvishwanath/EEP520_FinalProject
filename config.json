@@ -59,6 +59,16 @@
         "position": { "x": 0, "y": 0, "theta": 0 }
         },
         {
+        "definition": "defs/enemyl2.json",
+        "style": { "fill": "red", "stroke": "black" },
+        "position": { "x": 0, "y": 0, "theta": 0 }
+        },
+        {
+          "definition": "defs/enemyl3.json",
+          "style": { "fill": "red", "stroke": "black" },
+          "position": { "x": 0, "y": 0, "theta": 0 }
+          },
+        {
           "definition": "defs/message.json",
           "style": { "fill": "white", "stroke": "white" },
           "position": {"x": 0, "y": 0, "theta": 0}

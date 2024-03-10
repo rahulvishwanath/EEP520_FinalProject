@@ -72,7 +72,6 @@ class enemyController : public Process, public AgentInterface {
     double hit_timer = 0;
     double shoot_timer = 0;
     double shoot_increment = 0.1;
-    bool chasing = false;
     bool shooting = false;
     cpVect player_pos;
     int hits = 0;
