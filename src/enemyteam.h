@@ -30,9 +30,11 @@ class enemyteamController : public Process, public AgentInterface {
 
     /**
      * @brief The init method for the enemyteamController class.
-     * does not have any specific implementation.
+     * It handles the initialization of the enemy team.
+     * It handles the creation of the enemy team,
+     * It maintains the velocity of the enemie_ids in the team.
      */
-    void init() {}
+    void init() ;
 
     /**
      * @brief The start method for the enemyteamController class.
@@ -42,9 +44,7 @@ class enemyteamController : public Process, public AgentInterface {
 
     /**
      * @brief The update method for the enemyteamController class.
-     * It handles the initialization of the enemy team.
-     * It handles the creation of the enemy team,
-     * It maintains the velocity of the enemie_ids in the team.
+     * does not have any specific implementation.
      */
     void update() ;
 
@@ -54,10 +54,32 @@ class enemyteamController : public Process, public AgentInterface {
      */
     void stop() {}
 
+    /**
+     * @brief The create_level1_enemies method for the enemyteamController class.
+     * It creates the enemies for level 1.
+     */
+    void create_level1_enemies();
+
+    /**
+     * @brief The create_level2_enemies method for the enemyteamController class.
+     * It creates the enemies for level 2.
+     */
+    void create_level2_enemies();
+
+    /**
+     * @brief The create_level3_enemies method for the enemyteamController class.
+     * It creates the enemies for level 3.
+     */
+    void create_level3_enemies();
+
     private:
     // Set the initialize flag to true.
     bool initialize = true;
     std::vector<int> enemy_ids; // track the ids of the enemies in the team.
+    int level = 1; // track the level of the game.
+    bool publish_level2 = true;
+    bool publish_level3 = true;
+    bool publish_gamecomplete = true;
 
 };
 

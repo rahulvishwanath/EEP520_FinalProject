@@ -30,6 +30,12 @@ void bulletController::init() {
         remove_agent(id());
     });
 
+    // Handling the Collision of the bullet with the bullet
+    notice_collisions_with("Bullet", [&](Event &e) {
+        std::cout << "Bullet collided with Bullet!" << std::endl;
+        remove_agent(id());
+    });
+
 }
 
 

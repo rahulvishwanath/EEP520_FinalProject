@@ -30,9 +30,9 @@ class wallController : public Process, public AgentInterface {
 
     /**
      * @brief The init method for the wallController class.
-     * Does not have any specific implementation.
+     * It handles the initialization of the wall, the side walls and the maze layout.
      */
-    void init() {}
+    void init() ;
 
     /**
      * @brief The start method for the wallController class.
@@ -42,9 +42,9 @@ class wallController : public Process, public AgentInterface {
 
     /**
      * @brief The update method for the wallController class.
-     * It handles the initialization of the wall, the side walls and the maze layout.
+     * Does not have any specific implementation.
      */
-    void update();
+    void update() {}
 
     /**
      * @brief The stop method for the wallController class.
@@ -52,9 +52,29 @@ class wallController : public Process, public AgentInterface {
      */
     void stop() {}
 
+    /**
+     * @brief The create_level1_wall method for the wallController class.
+     * It creates the wall for level 1.
+     */
+    void create_level1_wall();
+
+    /**
+     * @brief The create_level2_wall method for the wallController class.
+     * It creates the wall for level 2.
+     */
+    void create_level2_wall();
+
+    /**
+     * @brief The create_level3_wall method for the wallController class.
+     * It creates the wall for level 3.
+     */
+    void create_level3_wall();
+
     private:
     // bool initialize is used to check if the wall has been created.
     bool initialize = true;
+    int level = 1; // The initital level of the game.
+    std::vector<int> wall_ids; // The ids of the walls in the game.
 
 };
 

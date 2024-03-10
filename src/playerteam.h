@@ -43,7 +43,7 @@ class playerteamController : public Process, public AgentInterface {
 
     /**
      * @brief The update method for the playerteamController class.
-     * It handles the creation of the player.
+     * Does not have any specific implementation.
      */
     void update() ;
 
@@ -53,10 +53,43 @@ class playerteamController : public Process, public AgentInterface {
      */
     void stop() {}
 
+    /**
+     * @brief The create_level1_message method for the playerteamController class.
+     * It creates the message for level 1.
+     */
+    void create_level1_message();
+
+    /**
+     * @brief The create_level2_message method for the playerteamController class.
+     * It creates the message for level 2.
+     */
+    void create_level2_message();
+
+    /**
+     * @brief The create_level3_message method for the playerteamController class.
+     * It creates the message for level 3.
+     */
+    void create_level3_message();
+
+    /**
+     * @brief The create_gameover_message method for the playerteamController class.
+     * It creates the gameover message.
+     */
+    void create_gameover_message();
+
+    /**
+     * @brief The create_gamecomplete_message method for the playerteamController class.
+     * It creates the game complete message.
+     */
+    void create_gamecomplete_message ();
+
     private:
     //  The boolean variable initialize is used to check if the player has been created.
     bool initialize = true;
     int player_id; // track the id of the player in the team.
+    int level = 1; // track the level of the game.
+    int message_id; // track the id of the message on the screen.
+    bool publish_gameover = true;
 
 };
 
