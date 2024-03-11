@@ -3,6 +3,8 @@
  * @brief This file contains the declaration of the playerteam class and its methods.
  * The playerteam class is a subclass of the Agent class and is used to create a team of players.
  * The playerteam class is used to create a team of players.
+ * The playerteam class is used to create the display of the title and tips message on the screen.
+ *
  * @author Rahul Vishwanath
  *
  * This header file declares the message class and its methods.
@@ -31,7 +33,10 @@ class playerteamController : public Process, public AgentInterface {
 
     /**
      * @brief The init method for the playerteamController class.
-     * It handles the display of the message on the screen.
+     * It handles the display of the title and tips message on the screen.
+     * It handles the display of the game complete message on the screen.
+     * It handles the display of level 1, level 2 and level 3 messages on the screen.
+     * It handles the creation of the player.
      */
     void init() ;
 
@@ -43,7 +48,7 @@ class playerteamController : public Process, public AgentInterface {
 
     /**
      * @brief The update method for the playerteamController class.
-     * Does not have any specific implementation.
+     * It handles the creation of the gameover message.
      */
     void update() ;
 
@@ -89,7 +94,6 @@ class playerteamController : public Process, public AgentInterface {
     int player_id; // track the id of the player in the team.
     int level = 1; // track the level of the game.
     int message_id; // track the id of the message on the screen.
-    bool publish_gameover = true;
 
 };
 

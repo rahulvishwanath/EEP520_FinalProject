@@ -1,9 +1,9 @@
 /**
  * @file bullet.h
  * @brief This file contains the declaration for the bullet class and its methods.
-* The bullet class is a subclass of the Agent class and is used to create a bullet that is shot by the player.
-* The bullet class is used to create a bullet that is shot by the player.
-*
+ * The bullet class is a subclass of the Agent class and is used to create a bullet that is shot by the player.
+ * The bullet class is used to create a bullet that is shot by the player. 
+ *
  * @author Rahul Vishwanath
  *
  * This header file declares the bullet class and its methods.
@@ -35,6 +35,8 @@ class bulletController : public Process, public AgentInterface {
     * It handles the collision of the bullet with the enemy.
     * It handles the collision of the bullet with the player.
     * It handles the collision of the bullet with the bulletenemy.
+    * It handles the collision of the bullet with the enemyl2.
+    * It handles the collision of the bullet with the enemyl3.
     */
     void init();
 

@@ -1,7 +1,7 @@
 {
     "name": "enemyteam",
     "type": "invisible",
-    "description": "A agent to manage enemy team creation and control",
+    "description": "A agent to manage enemy team creation and control depding on the game level.",
     "shape": [
         { "x": -10, "y": 10 },
         { "x": 10, "y": 10 },

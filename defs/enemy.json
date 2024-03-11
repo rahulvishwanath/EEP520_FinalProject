@@ -1,7 +1,7 @@
 {
   "name": "Enemy",
   "type": "dynamic",
-  "description": "Enemy agent with patrolling behavior and with the ability to shoot.",
+  "description": "Enemy agent at level 1 with patrolling behavior and with the ability to shoot.",
   "shape": "omni",
   "radius": 5,
   "mass": 1,

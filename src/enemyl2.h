@@ -1,7 +1,9 @@
 /**
  * @file enemyl2.h
  * @brief The file contains the declaration for the enemyl2class and its methods.
- * The enemyl2 class is a subclass of the Agent class and is used to create an enemy that chases the player and shoots at the player.
+ * The enemyl2 class is a subclass of the Agent class and is used to create an enemy that chases the player 
+ * and shoots at the player when the palyer is within a given range.
+ *
  * @author Rahul Vishwanath
  *
  * This header file declares the enemyl2 class and its methods.
@@ -26,22 +28,27 @@ class enemyl2Controller : public Process, public AgentInterface {
      */
     enemyl2Controller() : Process(), AgentInterface() {}
 
+    /**
+    * @brief The init method for the enemyl2Controller class.
+    * It handles the patrol direction of the enemyl2 when it hits the wall.
+    * It handles the collision of the enemyl2 with the wall.
+    * It handles the watch that keeps the record of the player's position. 
+    */
     void init();
 
     /**
-    * @brief The start method for the enemyController class.
+    * @brief The start method for the enemyl2Controller class.
     * Does not have any specific implementation.
     */
     void start() {}
 
     /**
-    * @brief The update method for the enemyController class.
-    * It handles the movement of the enemy.
-    * It changes the direction of the enemy when it reaches the patrol limit.
-    * It handles the collision of the enemy with the bullet.
-    * It handles the shooting of the enemy when the player is within shooting range.
-    * It handles the chase of the player by the enemy.
-    * It handles the collision of the enemy with the bullet.
+    * @brief The update method for the enemyl2Controller class.
+    * It handles the movement of the enemyl2.
+    * It handles the patrol of the enemyl2.
+    * It handles the shooting of the enemyl2 when the player is within range.
+    * It handles the chasing of the player by the enemyl2 when the player is within range.
+    * It handles the collision of the enemyl2 with the bullet.
     */
     void update();
 
@@ -54,6 +61,7 @@ class enemyl2Controller : public Process, public AgentInterface {
     /**
     * @brief The shoot method for the enemyController class.
     * It handles the shooting of the enemy.
+    * It handles direction of the bullet.
     */
     void shoot();
 

@@ -1,7 +1,7 @@
 {
     "name": "enemyl2",
     "type": "dynamic",
-    "description": "Enemy agent with patrolling behavior and with the ability to shoot and chase the player.",
+    "description": "Enemy agent at level 2 with patrolling behavior and with the ability to shoot and chase the player, when the player comes within a certain range.",
     "shape": "omni",
     "radius": 5,
     "mass": 1,

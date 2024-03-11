@@ -8,59 +8,45 @@ void playerteamController::init() {
     enviro::Agent& msg_agent_title = add_agent("message", -335, -300, 0, {{"color", "black"}, {"fill", "white"}, {"stroke", "white"}});
     msg_agent_title.label("Welcome To The Game..!! It's Kill or be Killed. Survival of the skillful..Lets HUNT..!!", 0, 0);
 
+    // Add Tips to the player
     enviro::Agent& msg_agent_tip = add_agent("message", -335, -280, 0, {{"color", "black"}, {"fill", "white"}, {"stroke", "white"}});
     msg_agent_tip.label("Use the a,s,d,f to navigate (Tap the keys, gives better control).. use space to shoot in the last pressed direction..use the momemtum for ur advantage", 0, 0);
 
 
     // watch for emit Level2 event
     watch("level2", [&](Event& e) {
-        printf("Level 2 event received in playerteam\n");
         level = 2;
-
+        
         // remove the level 1 message and set message_id to empty
         remove_agent(message_id);
         message_id = 0;
-
-        //calling create_level2_message to create the message
-        create_level2_message();
+        create_level2_message(); //calling create_level2_message to create the message
     });
 
     // watch for emit Level3 event
     watch("level3", [&](Event& e) {
-        printf("Level 3 event received in playerteam\n");
         level = 3;
 
         // remove the level 2 message and set message_id to empty
         remove_agent(message_id);
         message_id = 0;
-
-        //calling create_level3_message to create the message
-        create_level3_message();
+        create_level3_message(); //calling create_level3_message to create the message
     });
 
     // watch for emit GameComplete event
      watch("GameCompleted", [&](Event& e) {
-        printf(" GameCompleted event received in playerteam\n");
-        level = 0;
-
-        // remove the message and set message_id to empty
+        // remove the level 3 message and set message_id to empty
         remove_agent(message_id);
         message_id = 0;
-
-        //calling create_gamecomplete_message to create the message
-        create_gamecomplete_message();
+        create_gamecomplete_message(); //calling create_gamecomplete_message to create the message
     }); 
 
-
-    printf("playerteam level: %d\n", level);
-    printf("playerteam initialize: %d\n", initialize);
-
-    // If the initialize flag is true, then create the wall.
+    // If the initialize flag is true, then create the player and the level message.
     if (initialize) {
          initialize = false; // Set the initialize flag to false.
          // Create the player
         enviro::Agent& player_agent = add_agent("Player", 50, 50, 0, {{"fill", "blue"}, {"stroke", "black"}});
-        player_id = player_agent.get_id();
+        player_id = player_agent.get_id(); // save the player id
 
         // Check for the level of the game
         if (level == 1) {
@@ -77,19 +63,12 @@ void playerteamController::init() {
 
 void playerteamController::update() {
     //check if the player is killed 
-    if ((! agent_exists(player_id)) && (publish_gameover)) {
-        publish_gameover = false;
-        emit(Event("gameover"));
-
-        // delete the  level message and set message_id to empty
+    if ((! agent_exists(player_id))) {
+        // delete the level message and set message_id to empty
         remove_agent(message_id);
         message_id = 0;
-
-        // Create the game over message
-        create_gameover_message();
+        create_gameover_message(); // Create the game over message
     }
-
-
 }    
 
 void playerteamController::create_level1_message(){

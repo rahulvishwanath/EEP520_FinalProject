@@ -2,6 +2,7 @@
  * @file blockv.h
  * @brief This file contains the declaration for the blockv class. Define the constructor and the methods for the blockv class.
  * The blockv class is a subclass of the Agent class and is used to create a veritical wall of blocks.
+ *
  * @author Rahul Vishwanath
  *
  * This header file declares the blockv class and its methods. 

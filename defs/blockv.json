@@ -1,7 +1,7 @@
 {
     "name": "blockv",
     "type": "static",
-    "description": "Vertical block",
+    "description": "Vertical block for creating walls.",
     "shape": [
         { "x": -10, "y": 10 },
         { "x": 10, "y": 10 },

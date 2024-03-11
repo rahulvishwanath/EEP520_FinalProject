@@ -7,23 +7,19 @@ using namespace enviro;
 
 void enemyController::init() {
         
-// Handling collisions with blockv
+    // Handling collisions with blockv
     notice_collisions_with("blockv", [&](Event &e) {
         std::cout << "Enemy collided with Block!" << std::endl;
-
-        // Reverse direction of patrol
-        patrol_direction *= -1;
+        patrol_direction *= -1; // Reverse direction of patrol
     });
 
-
+    // Handling collisions with blockh
     notice_collisions_with("blockh", [&](Event &e) {
         std::cout << "Enemy collided with Block!" << std::endl;
-
-        // Reverse direction of patrol
-        patrol_direction *= -1;
+        patrol_direction *= -1; // Reverse direction of patrol
     });
 
-    // Watch for the player's position and update it
+    // Watch for the player's position and save it
     watch("player_position", [&](Event &e) {
         player_pos.x = e.value()["x"];
         player_pos.y = e.value()["y"];
@@ -35,15 +31,12 @@ void enemyController::update() {
 
     // Check if the player is within range
     if ( sensor_value(0) < patrol_range || sensor_value(1) < patrol_range){
-        // Enable shooting
-        shooting = true;
+        shooting = true; // Enable shooting
     }
-
-    printf("shoot: %d\n", shooting);
     
     // Simple patrolling behavior
     printf("patrolling\n");
-    omni_apply_force(0,10*patrol_direction);
+    omni_apply_force(0,10*patrol_direction); // Apply a force to the enemy to move it in the patrol direction
 
     // Check if shooting is enabled
     if ( shooting ) {
@@ -56,11 +49,10 @@ void enemyController::update() {
     }
     }
     
-
     // Wach for collision with the bullet
     notice_collisions_with("Bullet", [&](Event &e) {
         std::cout << "Enemy collided with Bullet!" << std::endl;
-        remove_agent(id());
+        remove_agent(id()); // Remove the enemy
     });
 
 }
@@ -71,10 +63,10 @@ void enemyController::shoot(){
     if (player_pos.x > position().x) {
         // Player is to the right
         Agent& bullet = add_agent("bulletenemy", x()+15 , y(), 0, {{"fill", "red"}, {"stroke", "black"}});
-        bullet.omni_apply_force(100,0);
+        bullet.omni_apply_force(100,0); // Apply a force to the bullet to the right
     } else {
         // Player is to the left
         Agent& bullet = add_agent("bulletenemy", x()-15 , y(), 0, {{"fill", "red"}, {"stroke", "black"}});
-        bullet.omni_apply_force(-100,0);
+        bullet.omni_apply_force(-100,0); // Apply a force to the bullet to the left
     }
 }

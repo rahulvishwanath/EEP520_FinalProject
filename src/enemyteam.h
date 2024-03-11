@@ -2,7 +2,7 @@
  * @file enemyteam.h
  * @brief This file declares the enemy team class and its methods.
  * The enemyteam class is a subclass of the Agent class and is used to create a team of enemies.
- * It is used to create a team of enemies that chase the player and shoot at the player.
+ * It is used to create a team of enemies that chase the player and shoot at the player depending on the current level of the game.
  * 
  * @author Rahul Vishwanath
  *
@@ -31,8 +31,9 @@ class enemyteamController : public Process, public AgentInterface {
     /**
      * @brief The init method for the enemyteamController class.
      * It handles the initialization of the enemy team.
-     * It handles the creation of the enemy team,
-     * It maintains the velocity of the enemie_ids in the team.
+     * It handles the creation of the enemy team, depending on the current level of the game.
+     * It maintains the velocity of the enemy_ids in the team.
+     * It handles the setup of event listeners for the enemy team.
      */
     void init() ;
 
@@ -44,13 +45,12 @@ class enemyteamController : public Process, public AgentInterface {
 
     /**
      * @brief The update method for the enemyteamController class.
-     * does not have any specific implementation.
+     * It handles the publishing of emit events like level2, level3 and gamecomplete.
      */
     void update() ;
 
     /**
      * @brief The stop method for the enemyteamController class.
-     * does not have any specific implementation.
      */
     void stop() {}
 

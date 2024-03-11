@@ -1,7 +1,8 @@
 /**
  * @file enemyl3.h
  * @brief The file contains the declaration for the enemyl3 class and its methods.
- * The enemyl3 class is a subclass of the Agent class and is used to create an enemy that chases the player and shoots at the player.
+ * The enemyl3 class is a subclass of the Agent class and is used to create an enemy that chases the player and shoots at the player from the start.
+ *
  * @author Rahul Vishwanath
  *
  * This header file declares the enemyl3 class and its methods.
@@ -17,8 +18,11 @@ using namespace enviro;
 /**
  * @class enemyl3Controller
  * @brief The enemyl3Controller class is used to control the enemyl3 class. It is a subclass of the Process and AgentInterface classes.
+ * and is used to create an enemy that chases the player 
+ * and shoots at the player when the palyer from the start of Level 3.
  *
  */
+
 class enemyl3Controller : public Process, public AgentInterface {
 
     public:
@@ -27,6 +31,12 @@ class enemyl3Controller : public Process, public AgentInterface {
      */
     enemyl3Controller() : Process(), AgentInterface() {}
 
+    /**
+    * @brief The init method for the enemyl3Controller class.
+    * It handles the initialization of the enemyl3.
+    * It handles the collision of the enemyl3 with the wall.
+    * It handles the watch that keeps the record of the player's position.
+    */
     void init();
 
     /**
@@ -38,11 +48,9 @@ class enemyl3Controller : public Process, public AgentInterface {
     /**
     * @brief The update method for the enemyController class.
     * It handles the movement of the enemy.
-    * It changes the direction of the enemy when it reaches the patrol limit.
-    * It handles the collision of the enemy with the bullet.
-    * It handles the shooting of the enemy when the player is within shooting range.
     * It handles the chase of the player by the enemy.
     * It handles the collision of the enemy with the bullet.
+    * It handles the shooting of the enemy when the player is within shooting range.
     */
     void update();
 
@@ -55,6 +63,7 @@ class enemyl3Controller : public Process, public AgentInterface {
     /**
     * @brief The shoot method for the enemyController class.
     * It handles the shooting of the enemy.
+    * It handles direction of the bullet.
     */
     void shoot();
 
@@ -66,7 +75,7 @@ class enemyl3Controller : public Process, public AgentInterface {
     double hit_timer = 0;
     double shoot_timer = 0;
     double shoot_increment = 0.1;
-    bool chasing = true;
+    bool chasing = true; // The enemy chases the player from the start
     bool shooting = false;
     cpVect player_pos;
     int hits = 0;

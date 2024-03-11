@@ -8,45 +8,40 @@ void wallController::init() {
     
     // watch for emit Level2 event
     watch("level2", [&](Event& e) {
-        printf("Level 2 event received in wall\n");
         level = 2;
         initialize = true;
+
         // remove the level 1 wall and set wall_ids to empty
         for (auto& id : wall_ids) {
             remove_agent(id);
         }
         wall_ids.clear();
-        //calling create_level2_wall to create the wall
-        create_level2_wall();
+        create_level2_wall(); //calling create_level2_wall to create the wall
     });
 
     // watch for emit Level3 event
     watch("level3", [&](Event& e) {
-        printf("Level 3 event received in wall\n");
         level = 3;
         initialize = true;
+
         // remove the level 2 wall and set wall_ids to empty
         for (auto& id : wall_ids) {
             remove_agent(id);
         }
         wall_ids.clear();
-        //calling create_level3_wall to create the wall
-        create_level3_wall();
+        create_level3_wall(); //calling create_level3_wall to create the wall
     });
-
-    printf("wall level: %d\n", level);
-    printf("wall initialize: %d\n", initialize);
 
     // If the initialize flag is true, then create the wall.
     if (initialize) {
          initialize = false; // Set the initialize flag to false.
         // Check for the level of the game
         if (level == 1) {
-            create_level1_wall();
+            create_level1_wall(); //calling create_level1_wall to create the wall
         }else if (level == 2) {
-            create_level2_wall();
+            create_level2_wall(); //calling create_level2_wall to create the wall
         }else if (level == 3) {
-            create_level3_wall();
+            create_level3_wall(); //calling create_level3_wall to create the wall
         }
     }       
 }

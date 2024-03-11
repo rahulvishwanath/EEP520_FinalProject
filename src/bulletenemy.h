@@ -1,9 +1,9 @@
 /**
  * @file bulletenemy.h
  * @brief This file contains the declaration for the bulletenemyy class and its methods.
-* The bulletenemyy class is a subclass of the Agent class and is used to create a bullet that is shot by the enemy.
-* The bulletenemyy class is used to create a bullet that is shot by the enemy.
-*
+ * The bulletenemyy class is a subclass of the Agent class and is used to create a bullet that is shot by the enemy.
+ * The bulletenemyy class is used to create a bullet that is shot by the enemy.
+ *
  * @author Rahul Vishwanath
  *
  * This header file declares the bulletenemyy class and its methods.
@@ -32,15 +32,19 @@ class bulletenemyController : public Process, public AgentInterface {
 
     /**
      * @brief The init method for the bulletenemyController class.
-     * Does not have any specific implementation.
+     * It handles the initialization of the bulletenemy.
+     * It handles the collision of the bulletenemy with the wall.
+     * It handles the collision of the bulletenemy with the player.
+     * It handles the collision of the bulletenemy with the bullet.
+     * It handles the collision of the bulletenemy with the bulletenemy.
+     * It handles the collision of the bulletenemy with the enemyl2.
+     * It handles the collision of the bulletenemy with the enemyl3.
      */
     void init() ;
 
     /**
      * @brief The start method for the bulletenemyController class.
-     * It handles the initialization of the bullet.
-     * It handles the collision of the bullet with the wall.
-     * It handles the collision of the bullet with the player.
+     * Does not have any specific implementation.
      */
     void start() {}
 

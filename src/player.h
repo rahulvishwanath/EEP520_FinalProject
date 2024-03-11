@@ -2,6 +2,7 @@
  * @file player.h
  * @brief This file contains the declaration of the PlayerController and Player classes.
  * The PlayerController class is used to control the player class. It is a subclass of the Process and AgentInterface classes.
+ * Used to create a player that can move and shoot.
  * 
  * @author Rahul Vishwanath
  *
@@ -32,7 +33,6 @@ class PlayerController : public Process, public AgentInterface {
      * @brief The init method for the PlayerController class.
      * It handles the initialization of the player.
      * It handles the control of the player with the arrow keys, and shoots with the space bar.
-     * It publishes the position of the player.
      * 
      */
     void init() ;
@@ -49,6 +49,9 @@ class PlayerController : public Process, public AgentInterface {
      * It handles the shooting of the player.
      * It handles the collision of the player with the bullet and kills it
      * It handles the collision of the player with the enemy and kills it.
+     * It handles the collision of the player with the enemyl2 and kills it.
+     * It handles the collision of the player with the enemyl3 and kills it.
+     * It publishes the position of the player.
      */
     void update();
 

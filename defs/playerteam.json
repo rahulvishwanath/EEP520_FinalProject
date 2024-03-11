@@ -1,7 +1,7 @@
 {
     "name": "playerteam",
     "type": "invisible",
-    "description": "A agent to manage player team creation and control",
+    "description": "A agent to manage player team creation and control of player and messages displayed on screen.",
     "shape": [
         { "x": -10, "y": 10 },
         { "x": 10, "y": 10 },

@@ -2,6 +2,7 @@
  * @file blockh.h
  * @brief This file contains the declaration for the blockh class. Define the constructor and the methods for the blockh class.
  * The blockh class is a subclass of the Agent class and is used to create a horizontal wall of blocks. 
+ *
  * @author Rahul Vishwanath
  *
  * This header file declares the blockh class and its methods. 

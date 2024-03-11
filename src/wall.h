@@ -30,7 +30,7 @@ class wallController : public Process, public AgentInterface {
 
     /**
      * @brief The init method for the wallController class.
-     * It handles the initialization of the wall, the side walls and the maze layout.
+     * It handles the initialization of the wall, the side walls and the maze layout, depending on the level of the game.
      */
     void init() ;
 
