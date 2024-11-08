@@ -1,0 +1,44 @@
+\doxysection{message.\+h}
+\hypertarget{message_8h_source}{}\label{message_8h_source}\index{EEP520\_FinalProject/src/message.h@{EEP520\_FinalProject/src/message.h}}
+\mbox{\hyperlink{message_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ \_\_MESSAGE\_AGENT\_\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ \_\_MESSAGE\_AGENT\_\_H\ }}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}enviro.h"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{using\ namespace\ }enviro;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmessage_controller}{messageController}}\ :\ \textcolor{keyword}{public}\ Process,\ \textcolor{keyword}{public}\ AgentInterface\ \{}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{classmessage_controller_a2f31cecc1a63be77399a8e2be3230a20}{messageController}}()\ :\ Process(),\ AgentInterface()\ \{\}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmessage_controller_acc5a80e8b39db57915d090e465656114}{init}}()\ \{\}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmessage_controller_a652f09989aa9f3e2ab32311896261dda}{start}}()\ \{\}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmessage_controller_aa3e49e87a6fbdd4fdeebde5021c6f814}{update}}()\ \{\}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmessage_controller_a8340ea74896c6ffca5f8824cf7122a36}{stop}}()\ \{\}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmessage}{message}}\ :\ \textcolor{keyword}{public}\ Agent\ \{}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{classmessage_a403d95adb3a809a29f45347643d5ab89}{message}}(json\ spec,\ World\&\ world)\ :\ Agent(spec,\ world)\ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ add\_process(c);}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{comment}{//\ The\ messageController\ object\ that\ controls\ the\ message.}}
+\DoxyCodeLine{00076\ \ \ \ \ \mbox{\hyperlink{classmessage_controller}{messageController}}\ c;}
+\DoxyCodeLine{00077\ \};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ DECLARE\_INTERFACE(\mbox{\hyperlink{classmessage}{message}})}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

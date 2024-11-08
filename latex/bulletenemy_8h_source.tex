@@ -1,0 +1,42 @@
+\doxysection{bulletenemy.\+h}
+\hypertarget{bulletenemy_8h_source}{}\label{bulletenemy_8h_source}\index{EEP520\_FinalProject/src/bulletenemy.h@{EEP520\_FinalProject/src/bulletenemy.h}}
+\mbox{\hyperlink{bulletenemy_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ \_\_BULLETENEMY\_AGENT\_\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ \_\_BULLETENEMY\_AGENT\_\_H\ }}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}enviro.h"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{using\ namespace\ }enviro;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classbulletenemy_controller}{bulletenemyController}}\ :\ \textcolor{keyword}{public}\ Process,\ \textcolor{keyword}{public}\ AgentInterface\ \{}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{classbulletenemy_controller_a887434a7136975f248f9174f958c236a}{bulletenemyController}}()\ :\ Process(),\ AgentInterface()\ \{\}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbulletenemy_controller_a05e4ec4845197315633f97f056288101}{init}}()\ ;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbulletenemy_controller_a0a95377b222b5d9d8ea41facac2f0254}{start}}()\ \{\}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbulletenemy_controller_ae196e5415a62c6b73bf323ceba2e19eb}{update}}()\ \{\}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbulletenemy_controller_ac56fef6b0c73a12d08e0dd779f824280}{stop}}()\ \{\}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00070\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classbulletenemy}{bulletenemy}}\ :\ \textcolor{keyword}{public}\ Agent\ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00077\ \ \ \ \ \mbox{\hyperlink{classbulletenemy_a03768b8e3995b0bd16446fcc18c2ba65}{bulletenemy}}(json\ spec,\ World\&\ world)\ :\ Agent(spec,\ world)\ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ add\_process(c);}
+\DoxyCodeLine{00079\ \ \ \ \ \}}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{comment}{//\ The\ bulletenemyController\ object\ that\ controls\ the\ bullet.}}
+\DoxyCodeLine{00082\ \ \ \ \ \mbox{\hyperlink{classbulletenemy_controller}{bulletenemyController}}\ c;}
+\DoxyCodeLine{00083\ \};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ DECLARE\_INTERFACE(\mbox{\hyperlink{classbulletenemy}{bulletenemy}})}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

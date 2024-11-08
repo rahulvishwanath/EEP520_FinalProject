@@ -1,0 +1,60 @@
+\doxysection{enemy.\+h}
+\hypertarget{enemy_8h_source}{}\label{enemy_8h_source}\index{EEP520\_FinalProject/src/enemy.h@{EEP520\_FinalProject/src/enemy.h}}
+\mbox{\hyperlink{enemy_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ \_\_ENEMY\_AGENT\_\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ \_\_ENEMY\_AGENT\_\_H\ }}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}enviro.h"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{using\ namespace\ }enviro;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classenemy_controller}{enemyController}}\ :\ \textcolor{keyword}{public}\ Process,\ \textcolor{keyword}{public}\ AgentInterface\ \{}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{classenemy_controller_a79e784b039109ce774d4543e2c833bbc}{enemyController}}()\ :\ Process(),\ AgentInterface()\ \{\}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classenemy_controller_a848ba45ed6ccd89a1f32db4c37c26e89}{init}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classenemy_controller_a939066575e1e13699285415f07ac3a8b}{start}}()\ \{\}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classenemy_controller_ae69aab7816d2956d8f1b8fb059f1757d}{update}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classenemy_controller_a66ac5dcbea01f1527d19ebeed9172e14}{stop}}()\ \{\}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classenemy_controller_ac2474fb45b5f43dae90b99c43ba3ec7a}{shoot}}();}
+\DoxyCodeLine{00065\ \ \ \ \ }
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{comment}{//\ Variables\ to\ keep\ track\ of\ the\ enemy's\ state}}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{double}\ patrol\_direction\ =\ 1;}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{double}\ patrol\_range\ =\ 100;}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{double}\ patrol\_speed\ =\ 0.02;}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{double}\ hit\_timer\ =\ 0;}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{double}\ shoot\_timer\ =\ 0;}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{double}\ shoot\_increment\ =\ 0.1;}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{bool}\ shooting\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00076\ \ \ \ \ cpVect\ player\_pos;}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{int}\ hits\ =\ 0;}
+\DoxyCodeLine{00078\ \ \ \ \ }
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00088\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classenemy}{enemy}}\ :\ \textcolor{keyword}{public}\ Agent\ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00095\ \ \ \ \ \mbox{\hyperlink{classenemy_a65ae88627c4a4f659da83b29cb794579}{enemy}}(json\ spec,\ World\&\ world)\ :\ Agent(spec,\ world)\ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ add\_process(c);}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ prevent\_rotation();}
+\DoxyCodeLine{00098\ \ \ \ \ \}}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{comment}{//\ The\ enemyController\ object\ that\ controls\ the\ enemy.}}
+\DoxyCodeLine{00101\ \ \ \ \ \mbox{\hyperlink{classenemy_controller}{enemyController}}\ c;}
+\DoxyCodeLine{00102\ \ \ \ \ }
+\DoxyCodeLine{00103\ \};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ DECLARE\_INTERFACE(\mbox{\hyperlink{classenemy}{enemy}})}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

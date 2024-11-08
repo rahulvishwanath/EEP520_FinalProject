@@ -1,0 +1,60 @@
+\doxysection{player.\+h}
+\hypertarget{player_8h_source}{}\label{player_8h_source}\index{EEP520\_FinalProject/src/player.h@{EEP520\_FinalProject/src/player.h}}
+\mbox{\hyperlink{player_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ \_\_PLAYER\_AGENT\_\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ \_\_PLAYER\_AGENT\_\_H\ }}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}enviro.h"{}}}
+\DoxyCodeLine{00016\ \textcolor{keyword}{using\ namespace\ }enviro;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_player_controller}{PlayerController}}\ :\ \textcolor{keyword}{public}\ Process,\ \textcolor{keyword}{public}\ AgentInterface\ \{}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_player_controller_af2d4e93f407c9cd40a5de9f14cbeadec}{PlayerController}}()\ :\ Process(),\ AgentInterface()\ \{\}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_controller_a28720c79dfc5d3c9c229792aece8e4a5}{init}}()\ ;}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_controller_a87c7bffe35ac3cedcd6d38b1097a6489}{start}}()\ \{\}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_controller_a01e6a2e4e543eb8f064a671fb3c05a16}{update}}();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_controller_a971ef4bf25e75b570fd59f824d7fdd92}{stop}}()\ \{\}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_controller_aedd3172408aa8225dcff51ee217e3ece}{shoot}}();}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{comment}{//\ Variables\ to\ keep\ track\ of\ the\ player's\ state}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{double}\ thrust\ =\ 0\ ,\ torque\ =\ 0;}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{double}\ displacement\ =\ 30;}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{double}\ hit\_timer\ =\ 0;}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{double}\ x=15,\ y=0;}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{int}\ bullet\_direction\ =\ 1;}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{int}\ x\_axis\ =\ 1\ ,\ y\_axis\ =\ 0;}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{int}\ hits\ =\ 0;}
+\DoxyCodeLine{00082\ \ \ \ \ }
+\DoxyCodeLine{00083\ \ \ \ \ }
+\DoxyCodeLine{00084\ \};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00092\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_player}{Player}}\ :\ \textcolor{keyword}{public}\ Agent\ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00100\ \ \ \ \ \mbox{\hyperlink{class_player_ace5ab960396ea44030cd8a994498b05a}{Player}}(json\ spec,\ World\&\ world)\ :\ Agent(spec,\ world)\ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ add\_process(c);}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ prevent\ rotation\ of\ the\ player}}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ prevent\_rotation();}
+\DoxyCodeLine{00104\ \ \ \ \ \}}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{comment}{//\ The\ PlayerController\ object\ that\ controls\ the\ player.}}
+\DoxyCodeLine{00107\ \ \ \ \ \mbox{\hyperlink{class_player_controller}{PlayerController}}\ c;}
+\DoxyCodeLine{00108\ \ \ \ \ }
+\DoxyCodeLine{00109\ \};}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ DECLARE\_INTERFACE(\mbox{\hyperlink{class_player}{Player}})}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

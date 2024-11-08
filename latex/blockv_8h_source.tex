@@ -1,0 +1,43 @@
+\doxysection{blockv.\+h}
+\hypertarget{blockv_8h_source}{}\label{blockv_8h_source}\index{EEP520\_FinalProject/src/blockv.h@{EEP520\_FinalProject/src/blockv.h}}
+\mbox{\hyperlink{blockv_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ \_\_BLOCKV\_AGENT\_\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ \_\_BLOCKV\_AGENT\_\_H\ }}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}enviro.h"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{using\ namespace\ }enviro;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classblockv_controller}{blockvController}}\ :\ \textcolor{keyword}{public}\ Process,\ \textcolor{keyword}{public}\ AgentInterface\ \{}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{classblockv_controller_a827ca92b9be27c534be868d61e812c4b}{blockvController}}()\ :\ Process(),\ AgentInterface()\ \{\}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classblockv_controller_a81e3c015d38223c2fc10cada13cb5c42}{init}}()\ \{\}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classblockv_controller_ac33010aabf6e54b5a739f3ea6efeb043}{start}}()\ \{\}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classblockv_controller_aae8fe1d22daad28aec7cc15874367c34}{update}}()\ \{\}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classblockv_controller_a2fc5ce5c2c844467776ffe740c8c9cb4}{stop}}()\ \{\}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classblockv}{blockv}}\ :\ \textcolor{keyword}{public}\ Agent\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{classblockv_a1d85ee3eb7866f68e78dc453b303058f}{blockv}}(json\ spec,\ World\&\ world)\ :\ Agent(spec,\ world)\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ add\_process(c);}
+\DoxyCodeLine{00073\ \ \ \ \ \}}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{comment}{//\ The\ blockvController\ object\ that\ is\ used\ to\ control\ the\ blockv\ class.}}
+\DoxyCodeLine{00077\ \ \ \ \ \mbox{\hyperlink{classblockv_controller}{blockvController}}\ c;}
+\DoxyCodeLine{00078\ \};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ DECLARE\_INTERFACE(\mbox{\hyperlink{classblockv}{blockv}})}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

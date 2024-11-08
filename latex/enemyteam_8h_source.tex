@@ -1,0 +1,57 @@
+\doxysection{enemyteam.\+h}
+\hypertarget{enemyteam_8h_source}{}\label{enemyteam_8h_source}\index{EEP520\_FinalProject/src/enemyteam.h@{EEP520\_FinalProject/src/enemyteam.h}}
+\mbox{\hyperlink{enemyteam_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ \_\_ENEMYTEAM\_AGENT\_\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ \_\_ENEMYTEAM\_AGENT\_\_H\ }}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}enviro.h"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{using\ namespace\ }enviro;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classenemyteam_controller}{enemyteamController}}\ :\ \textcolor{keyword}{public}\ Process,\ \textcolor{keyword}{public}\ AgentInterface\ \{}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{classenemyteam_controller_a7fb0c10605d6b6b600137fac66711bc3}{enemyteamController}}()\ :\ Process(),\ AgentInterface()\ \{\}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classenemyteam_controller_a3936e73cf151b39abab319b3bfee10bb}{init}}()\ ;}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classenemyteam_controller_ac98f037e4c54bbe49b784e5cb0597077}{start}}()\ \{\}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classenemyteam_controller_a2a1596f36d961054f36db38f53cea174}{update}}()\ ;}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classenemyteam_controller_a4fdf6d724948761fe32f22528fe60444}{stop}}()\ \{\}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classenemyteam_controller_a0472268dff295d5b6e0ac1215c43c1be}{create\_level1\_enemies}}();}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classenemyteam_controller_a4220ecec90bdb935fcaf94e1d4331915}{create\_level2\_enemies}}();}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classenemyteam_controller_a7b2a153a33ea631ba9c554c8d526ca86}{create\_level3\_enemies}}();}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{comment}{//\ Set\ the\ initialize\ flag\ to\ true.}}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{bool}\ initialize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00078\ \ \ \ \ std::vector<int>\ enemy\_ids;\ \textcolor{comment}{//\ track\ the\ ids\ of\ the\ enemies\ in\ the\ team.}}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{int}\ level\ =\ 1;\ \textcolor{comment}{//\ track\ the\ level\ of\ the\ game.}}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{bool}\ publish\_level2\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{bool}\ publish\_level3\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{bool}\ publish\_gamecomplete\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00091\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classenemyteam}{enemyteam}}\ :\ \textcolor{keyword}{public}\ Agent\ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00098\ \ \ \ \ \mbox{\hyperlink{classenemyteam_a8c49bac4a8bba6ef54e530505250e662}{enemyteam}}(json\ spec,\ World\&\ world)\ :\ Agent(spec,\ world)\ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ add\_process(c);}
+\DoxyCodeLine{00100\ \ \ \ \ \}}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{comment}{//\ The\ enemyteamController\ object\ that\ controls\ the\ enemy\ team.}}
+\DoxyCodeLine{00103\ \ \ \ \ \mbox{\hyperlink{classenemyteam_controller}{enemyteamController}}\ c;}
+\DoxyCodeLine{00104\ \};}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ DECLARE\_INTERFACE(\mbox{\hyperlink{classenemyteam}{enemyteam}})}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

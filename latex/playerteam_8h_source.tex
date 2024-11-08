@@ -1,0 +1,58 @@
+\doxysection{playerteam.\+h}
+\hypertarget{playerteam_8h_source}{}\label{playerteam_8h_source}\index{EEP520\_FinalProject/src/playerteam.h@{EEP520\_FinalProject/src/playerteam.h}}
+\mbox{\hyperlink{playerteam_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#ifndef\ \_\_PLAYERTEAM\_AGENT\_\_H}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ \_\_PLAYERTEAM\_AGENT\_\_H\ }}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}enviro.h"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{using\ namespace\ }enviro;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classplayerteam_controller}{playerteamController}}\ :\ \textcolor{keyword}{public}\ Process,\ \textcolor{keyword}{public}\ AgentInterface\ \{}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{classplayerteam_controller_a55e03cec6ea972ed83316638ef4d3519}{playerteamController}}()\ :\ Process(),\ AgentInterface()\ \{\}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplayerteam_controller_a715334570ef108008383cf60462fe9fa}{init}}()\ ;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplayerteam_controller_acab9327d19f183c6c1fb15db9e8e0102}{start}}()\ \{\}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplayerteam_controller_a4e13cbcda5aad5f5dc3090d9cca0802a}{update}}()\ ;}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplayerteam_controller_a81b95c89db9c3499c9af3d7b1bec2d85}{stop}}()\ \{\}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplayerteam_controller_a951032111d5f598ad517b56df7626f0c}{create\_level1\_message}}();}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplayerteam_controller_ac87ce2c1d9931290a98350cb5e9abd03}{create\_level2\_message}}();}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplayerteam_controller_a7a46716f1665be2f9b619c01f44a0a95}{create\_level3\_message}}();}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplayerteam_controller_aea8180d9005fbb8f27bf06cc8de587a3}{create\_gameover\_message}}();}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classplayerteam_controller_afb82d77a3ee87cc9556445928300058e}{create\_gamecomplete\_message}}\ ();}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{comment}{//\ \ The\ boolean\ variable\ initialize\ is\ used\ to\ check\ if\ the\ player\ has\ been\ created.}}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{bool}\ initialize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{int}\ player\_id;\ \textcolor{comment}{//\ track\ the\ id\ of\ the\ player\ in\ the\ team.}}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{int}\ level\ =\ 1;\ \textcolor{comment}{//\ track\ the\ level\ of\ the\ game.}}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{int}\ message\_id;\ \textcolor{comment}{//\ track\ the\ id\ of\ the\ message\ on\ the\ screen.}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classplayerteam}{playerteam}}\ :\ \textcolor{keyword}{public}\ Agent\ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00102\ \ \ \ \ \mbox{\hyperlink{classplayerteam}{playerteam}}(json\ spec,\ World\&\ world)\ :\ Agent(spec,\ world)\ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ add\_process(c);}
+\DoxyCodeLine{00104\ \ \ \ \ \}}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00106\ \ \ \ \ \mbox{\hyperlink{classplayerteam_controller}{playerteamController}}\ c;}
+\DoxyCodeLine{00107\ \};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ DECLARE\_INTERFACE(\mbox{\hyperlink{classplayerteam}{playerteam}})}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,44 @@
+\doxysection{blockh.\+h}
+\hypertarget{blockh_8h_source}{}\label{blockh_8h_source}\index{EEP520\_FinalProject/src/blockh.h@{EEP520\_FinalProject/src/blockh.h}}
+\mbox{\hyperlink{blockh_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ \_\_BLOCKH\_AGENT\_\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ \_\_BLOCKH\_AGENT\_\_H\ }}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}enviro.h"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{using\ namespace\ }enviro;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classblockh_controller}{blockhController}}\ :\ \textcolor{keyword}{public}\ Process,\ \textcolor{keyword}{public}\ AgentInterface\ \{}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{classblockh_controller_aca1a68d6770818a98b452914e95537ef}{blockhController}}()\ :\ Process(),\ AgentInterface()\ \{\}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classblockh_controller_a2bfa34b74312ff76a3fcdfa938d608d1}{init}}()\ \{\}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classblockh_controller_a8f19e0ae7347ca91aa3a4abc69b6529e}{start}}()\ \{\}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classblockh_controller_acf179ce49abe7824ee1b8c0709cafcc3}{update}}()\ \{\}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classblockh_controller_a2042f5c3cbe7005147d4c54cc6852198}{stop}}()\ \{\}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00066\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classblockh}{blockh}}\ :\ \textcolor{keyword}{public}\ Agent\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00073\ \ \ \ \ \mbox{\hyperlink{classblockh_a181162123db4e40e40b9905e2eb6c74b}{blockh}}(json\ spec,\ World\&\ world)\ :\ Agent(spec,\ world)\ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ add\_process(c);}
+\DoxyCodeLine{00075\ \ \ \ \ \}}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{comment}{//\ The\ blockhController\ object\ that\ is\ used\ to\ control\ the\ blockh\ class.}}
+\DoxyCodeLine{00079\ \ \ \ \ \mbox{\hyperlink{classblockh_controller}{blockhController}}\ c;}
+\DoxyCodeLine{00080\ \};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ DECLARE\_INTERFACE(\mbox{\hyperlink{classblockh}{blockh}})}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

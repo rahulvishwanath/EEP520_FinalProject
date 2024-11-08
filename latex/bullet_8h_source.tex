@@ -1,0 +1,40 @@
+\doxysection{bullet.\+h}
+\hypertarget{bullet_8h_source}{}\label{bullet_8h_source}\index{EEP520\_FinalProject/src/bullet.h@{EEP520\_FinalProject/src/bullet.h}}
+\mbox{\hyperlink{bullet_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ \_\_BULLET\_AGENT\_\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ \_\_BULLET\_AGENT\_\_H\ }}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}enviro.h"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{using\ namespace\ }enviro;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classbullet_controller}{bulletController}}\ :\ \textcolor{keyword}{public}\ Process,\ \textcolor{keyword}{public}\ AgentInterface\ \{}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{classbullet_controller_acabafdbecdb7cac2be109ad0b85b0f3a}{bulletController}}()\ :\ Process(),\ AgentInterface()\ \{\}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbullet_controller_a77fbfc31353dc81b06615375c0287ddb}{init}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbullet_controller_a1ece2949650eab002b5399a9ffd94b13}{start}}()\ \{\}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbullet_controller_a3ced7274bb6f9b70bc57efcfae6b354a}{update}}()\ \{\}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbullet_controller_a4ab40b1824a2cbba7c7c10da7391d089}{stop}}()\ \{\}}
+\DoxyCodeLine{00060\ \};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00066\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classbullet}{bullet}}\ :\ \textcolor{keyword}{public}\ Agent\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00073\ \ \ \ \ \mbox{\hyperlink{classbullet_a7fcb9c4b38cab4ee111e981d4ace3068}{bullet}}(json\ spec,\ World\&\ world)\ :\ Agent(spec,\ world)\ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ add\_process(c);}
+\DoxyCodeLine{00075\ \ \ \ \ \}}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{comment}{//\ The\ bulletController\ object\ that\ controls\ the\ bullet.}}
+\DoxyCodeLine{00078\ \ \ \ \ \mbox{\hyperlink{classbullet_controller}{bulletController}}\ c;}
+\DoxyCodeLine{00079\ \};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ DECLARE\_INTERFACE(\mbox{\hyperlink{classbullet}{bullet}})}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

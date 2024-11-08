@@ -1,0 +1,58 @@
+\doxysection{enemyl2.\+h}
+\hypertarget{enemyl2_8h_source}{}\label{enemyl2_8h_source}\index{EEP520\_FinalProject/src/enemyl2.h@{EEP520\_FinalProject/src/enemyl2.h}}
+\mbox{\hyperlink{enemyl2_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ \_\_ENEMYL2\_AGENT\_\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ \_\_ENEMYL2\_AGENT\_\_H\ }}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}enviro.h"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{using\ namespace\ }enviro;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classenemyl2_controller}{enemyl2Controller}}\ :\ \textcolor{keyword}{public}\ Process,\ \textcolor{keyword}{public}\ AgentInterface\ \{}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{classenemyl2_controller_a27c5b62d0e7b21068a3818341f1bf53f}{enemyl2Controller}}()\ :\ Process(),\ AgentInterface()\ \{\}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classenemyl2_controller_a3ac888c29339a494f6c787b096fd2fda}{init}}();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classenemyl2_controller_a2da472a1854c39bbdd67e68c236a1bf5}{start}}()\ \{\}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classenemyl2_controller_a9f8d4a63bf4941d3abd1b6584471f406}{update}}();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classenemyl2_controller_a7081ecec25bead0155d8d90d1d3725eb}{stop}}()\ \{\}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classenemyl2_controller_a91bf0b4f9d573a031cf10151a495330c}{shoot}}();}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//\ Variables\ to\ keep\ track\ of\ the\ enemy's\ state}}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{double}\ patrol\_direction\ =\ 1;}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{double}\ patrol\_range\ =\ 100;}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{double}\ patrol\_speed\ =\ 0.02;}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{double}\ hit\_timer\ =\ 0;}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{double}\ shoot\_timer\ =\ 0;}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{double}\ shoot\_increment\ =\ 0.1;}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{bool}\ chasing\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{bool}\ shooting\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00078\ \ \ \ \ cpVect\ player\_pos;}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{int}\ hits\ =\ 0;}
+\DoxyCodeLine{00080\ \};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00086\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classenemyl2}{enemyl2}}\ :\ \textcolor{keyword}{public}\ Agent\ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00093\ \ \ \ \ \mbox{\hyperlink{classenemyl2_a2005f8c0c4d81cfb0495e89190c418cc}{enemyl2}}(json\ spec,\ World\&\ world)\ :\ Agent(spec,\ world)\ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ add\_process(c);}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ prevent\_rotation();}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \}}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{comment}{//\ The\ enemyl2Controller\ object\ that\ controls\ the\ enemy.}}
+\DoxyCodeLine{00100\ \ \ \ \ \mbox{\hyperlink{classenemyl2_controller}{enemyl2Controller}}\ c;}
+\DoxyCodeLine{00101\ \};}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ DECLARE\_INTERFACE(\mbox{\hyperlink{classenemyl2}{enemyl2}})}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,47 @@
+\doxysection{Player\+Controller Class Reference}
+\hypertarget{class_player_controller}{}\label{class_player_controller}\index{PlayerController@{PlayerController}}
+
+
+The \doxylink{class_player_controller}{Player\+Controller} class is used to control the player class. It is a subclass of the Process and Agent\+Interface classes.  
+
+
+
+
+{\ttfamily \#include $<$player.\+h$>$}
+
+Inheritance diagram for Player\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_player_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_player_controller_af2d4e93f407c9cd40a5de9f14cbeadec}\label{class_player_controller_af2d4e93f407c9cd40a5de9f14cbeadec} 
+{\bfseries Player\+Controller} ()
+\begin{DoxyCompactList}\small\item\em The constructor for the \doxylink{class_player_controller}{Player\+Controller} class. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_controller_a28720c79dfc5d3c9c229792aece8e4a5}\label{class_player_controller_a28720c79dfc5d3c9c229792aece8e4a5} 
+void {\bfseries init} ()
+\begin{DoxyCompactList}\small\item\em The init method for the \doxylink{class_player_controller}{Player\+Controller} class. It handles the initialization of the player. It handles the control of the player with the arrow keys, and shoots with the space bar. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_controller_a87c7bffe35ac3cedcd6d38b1097a6489}\label{class_player_controller_a87c7bffe35ac3cedcd6d38b1097a6489} 
+void {\bfseries start} ()
+\begin{DoxyCompactList}\small\item\em The start method for the \doxylink{class_player_controller}{Player\+Controller} class. Does not have any specific implementation. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_controller_a01e6a2e4e543eb8f064a671fb3c05a16}\label{class_player_controller_a01e6a2e4e543eb8f064a671fb3c05a16} 
+void {\bfseries update} ()
+\begin{DoxyCompactList}\small\item\em The update method for the \doxylink{class_player_controller}{Player\+Controller} class. It handles the movement of the player when the keyboard is not pressed. It handles the shooting of the player. It handles the collision of the player with the bullet and kills it It handles the collision of the player with the enemy and kills it. It handles the collision of the player with the \doxylink{classenemyl2}{enemyl2} and kills it. It handles the collision of the player with the \doxylink{classenemyl3}{enemyl3} and kills it. It publishes the position of the player. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_controller_a971ef4bf25e75b570fd59f824d7fdd92}\label{class_player_controller_a971ef4bf25e75b570fd59f824d7fdd92} 
+void {\bfseries stop} ()
+\begin{DoxyCompactList}\small\item\em The stop method for the \doxylink{class_player_controller}{Player\+Controller} class. Does not have any specific implementation. \end{DoxyCompactList}\item 
+\Hypertarget{class_player_controller_aedd3172408aa8225dcff51ee217e3ece}\label{class_player_controller_aedd3172408aa8225dcff51ee217e3ece} 
+void {\bfseries shoot} ()
+\begin{DoxyCompactList}\small\item\em The shoot method for the \doxylink{class_player_controller}{Player\+Controller} class. It handles the shooting of the player. It handles the creation of the bullet. It handles the direction of the bullet. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_player_controller}{Player\+Controller} class is used to control the player class. It is a subclass of the Process and Agent\+Interface classes. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+EEP520\+\_\+\+Final\+Project/src/\mbox{\hyperlink{player_8h}{player.\+h}}\item 
+EEP520\+\_\+\+Final\+Project/src/player.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,54 @@
+\doxysection{wall.\+h}
+\hypertarget{wall_8h_source}{}\label{wall_8h_source}\index{EEP520\_FinalProject/src/wall.h@{EEP520\_FinalProject/src/wall.h}}
+\mbox{\hyperlink{wall_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ \_\_WALL\_AGENT\_\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ \_\_WALL\_AGENT\_\_H\ }}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}enviro.h"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{using\ namespace\ }enviro;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classwall_controller}{wallController}}\ :\ \textcolor{keyword}{public}\ Process,\ \textcolor{keyword}{public}\ AgentInterface\ \{}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{classwall_controller_a21110645e500dd9751d479508176cab4}{wallController}}()\ :\ Process(),\ AgentInterface()\ \{\}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classwall_controller_a8e73dfc4bc94bf7258106e3cc30e0850}{init}}()\ ;}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classwall_controller_a678a22e5508d639fbd09d5a3cc443de9}{start}}()\ \{\}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classwall_controller_aaddc59518943904441961e2d41ecd4bc}{update}}()\ \{\}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classwall_controller_a332707397864f145c05a7a33b9417bed}{stop}}()\ \{\}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classwall_controller_a5cb4396aa4c01ce1fcdd79388f6fdd61}{create\_level1\_wall}}();}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classwall_controller_a254201d32aed459aaa11c75a1d303603}{create\_level2\_wall}}();}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classwall_controller_ac7e7c5686fe2d7ac33cf71d202fc6208}{create\_level3\_wall}}();}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{comment}{//\ bool\ initialize\ is\ used\ to\ check\ if\ the\ wall\ has\ been\ created.}}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{bool}\ initialize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{int}\ level\ =\ 1;\ \textcolor{comment}{//\ The\ initital\ level\ of\ the\ game.}}
+\DoxyCodeLine{00077\ \ \ \ \ std::vector<int>\ wall\_ids;\ \textcolor{comment}{//\ The\ ids\ of\ the\ walls\ in\ the\ game.}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00086\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classwall}{wall}}\ :\ \textcolor{keyword}{public}\ Agent\ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00093\ \ \ \ \ \mbox{\hyperlink{classwall_a93b29df2e2ac594d8f40ce10bcb5f162}{wall}}(json\ spec,\ World\&\ world)\ :\ Agent(spec,\ world)\ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ add\_process(c);}
+\DoxyCodeLine{00095\ \ \ \ \ \}}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{comment}{//\ The\ wallController\ object\ that\ controls\ the\ wall.}}
+\DoxyCodeLine{00098\ \ \ \ \ \mbox{\hyperlink{classwall_controller}{wallController}}\ c;}
+\DoxyCodeLine{00099\ \};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ DECLARE\_INTERFACE(\mbox{\hyperlink{classwall}{wall}})}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
